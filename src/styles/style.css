@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'SpecialElite';
+    src: url('../SpecialElite-Regular.ttf');
+    font-weight: 600;
+    font-style: normal; 
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'SpecialElite';
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-grid-container {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+
+    display: grid;
+    grid-template-rows: 180px 1fr 40px;
+
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+
+/*header styling*/
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+.restaurant-name {
+    font-size: 4rem;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 1rem auto 2rem;
+    font-size: 1.5rem;
+}
+
+/*home styling*/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 1rem auto 2rem;
+    height: 100%;
+}
+
+.restaurant-greeting h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+/*slideshow styling*/
+.home-slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.home-slides {
+    display: none;
+}
+
+.slide-caption {
+    color: #373737;
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    /* position: absolute; */
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.slide-num-text {
+    color: #f2f2f2;
+    font-size: 1.25rem;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+/*footer styling*/
+.footer {
+    text-align: center;
+    margin-bottom: 1rem;
+}
