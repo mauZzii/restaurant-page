@@ -38,10 +38,11 @@ Live Version [here](https://mauzzii.github.io/restaurant-page/).
 * **Dynamic Content:** using JS to remove hard-coded HTML in favor of appended elements
 * **Tabbed Browsing:** using event listeners to switch between different modules displaying each "tab"
 * **Page Deployment via Github:** using custom npm script to update live preview on GH
+* **ES6 Modules:** using exports/imports, module scope, code splitting, and more.
 
 ### Comments/To Do
 
-* Create barebones HTML (image, headline, copy)
 * Turn barebones HTML into npm/webpack js files
+* Figure out best file/code structure (ES6 Modules)
 * Implement tabbed browsing to access Contact and Menu pages
 * Implement custom npm script to update live preview
