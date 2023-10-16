@@ -1,31 +1,44 @@
 import _ from 'lodash';
-import './style.css';
+import './styles';
 
 function consoleAlert() {
     console.log('I ran');
 };
 
-function addContainer() {
+function addGridContainer() {
     const body = document.querySelector('body');
     const container = document.createElement('div');
-    container.classList.add('container');
+    container.classList.add('main-grid-container');
 
     body.appendChild(container);
 
     return container;
 };
 
-function addHeading() {
-    addContainer();
-    const container = document.querySelector('.container');
-    const element = document.createElement('h1');
-    element.textContent = _.join(['This', 'is', 'a', 'lodash', 'heading'], ' ');
+function addHeader() {
+    const gridContainer = document.querySelector('.main-grid-container');
+    const header = document.createElement('header');
+    const navbar = createNavbar();
+    header.classList.add('header');
 
-    container.appendChild(element);
+    gridContainer.appendChild(header);
+    header.appendChild(navbar);
 
-    return element;
-};
+    return header;
+}
 
-addHeading();
+function createNavbar() {
+    const navContainer = document.createElement('nav');
+    const navList = document.createElement('ul');
+    const navItems = ['HOME', 'MENU', 'CONTACT'];
 
-consoleAlert();
+    for (let i = 0; i < 3; i += 1) {
+        const li = document.createElement('li');
+        li.textContent = navItems[i];
+        navList.appendChild(li);
+    };
+
+    navContainer.classList.add('navbar');
+    
+    navContainer.appendChild(navList);
+}
