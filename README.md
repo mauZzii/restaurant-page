@@ -42,5 +42,4 @@ Live Version [here](https://mauzzii.github.io/restaurant-page/).
 
 ### Comments/To Do
 
-* Create a menu page (Add a handful of coffee items)
 * Create a contact page which includes a google map view, phone number, email, and physical address (fake of course)
