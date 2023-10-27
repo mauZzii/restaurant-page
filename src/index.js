@@ -1,83 +1,28 @@
-import './styles/style.css';
+import { createHeader, createNavbar, handleTabClick, createFooter } from './modules/pageElements.js';
+import loadHome from './modules/home.js';
+import loadMenu from './modules/menu.js';
+import loadContact from './modules/contact';
 
-//test to make sure imported correctly
-// function consoleAlert() {
-//     console.log('I ran');
-// };
+import './styles/normalize.css'
+import './styles/style.css'
 
-function addGridContainer() {
-    const body = document.querySelector('body');
-    const container = document.createElement('div');
-    container.classList.add('main-grid-container');
+function initializePage() {
+    const mainGridContainer = document.createElement('div');
+    mainGridContainer.classList.add('main-grid-container');
 
-    body.appendChild(container);
+    const header = createHeader();
 
-    return container;
-};
-
-
-//START: Create header
-function addHeader() {
-    const gridContainer = document.querySelector('.main-grid-container');
-    const header = document.createElement('header');
-    const navbar = createNavbar();
-    const title = createHeaderTitle();
-    header.classList.add('header');
-
-    gridContainer.appendChild(header);
-    header.appendChild(navbar);
-    header.appendChild(title)
-
-    return header;
-}
-
-function createNavbar() {
-    const navContainer = document.createElement('nav');
-    const navList = document.createElement('ul');
-    const navItems = ['HOME', 'MENU', 'CONTACT'];
-
-    for (let i = 0; i < 3; i += 1) {
-        const li = document.createElement('li');
-        li.textContent = navItems[i];
-        navList.appendChild(li);
-    };
-
-    navContainer.classList.add('navbar');
-    navContainer.appendChild(navList);
-
-    return navContainer;
-}
-
-function createHeaderTitle() {
-    const restaurantName = document.createElement('h1');
-    restaurantName.classList.add('restaurant-name');
-    restaurantName.textContent = 'Two Rivers Cafe'; //maybe have it change based on page name?
-
-    return restaurantName;
-}
-//END: Create header
-
-//START: Create main section
-function createMainSection() {
     const mainSection = document.createElement('main');
-    const mainContainer = document.createElement('div');
-    const mainGridContainer = document.querySelector('.main-grid-container');
+    mainSection.setAttribute('id', 'main');
 
-    mainSection.classList.add('main');
-    mainContainer.classList.add('main-container');
-
-    mainSection.appendChild(mainContainer);
+    const footer = createFooter();
+    
+    mainGridContainer.appendChild(header);
     mainGridContainer.appendChild(mainSection);
+    mainGridContainer.appendChild(footer);
+    document.body.appendChild(mainGridContainer);
 
-
-    return mainSection;
+    loadHome();
 }
-//END: Create main section
 
-
-
-//Build page
-addGridContainer();
-addHeader();
-createMainSection();
-// consoleAlert();
+initializePage();

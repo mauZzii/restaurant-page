@@ -61,8 +61,21 @@ ul {
     font-size: 1.5rem;
 }
 
+.nav-link {
+    transition: transform 0.3s;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid black;
+}
+
+.nav-link:hover {
+    transform: translateY(-10%);
+    cursor: pointer;
+}
+
 /*home styling*/
-.main-container {
+.home-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,53 +85,26 @@ ul {
     height: 100%;
 }
 
+.restaurant-greeting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        margin: 2.5rem auto 2rem;
+        gap: 2.5rem;
+}
+
 .restaurant-greeting h2 {
     margin-bottom: 2rem;
     text-align: center;
 }
 
-
-/*slideshow styling*/
-.home-slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-}
-
-.home-slides {
-    display: none;
-}
-
-.slide-caption {
-    color: #373737;
-    font-size: 1rem;
-    padding: 0.5rem 1.25rem;
-    /* position: absolute; */
-    bottom: 0.5rem;
-    width: 100%;
+.restaurant-greeting p {
     text-align: center;
-}
-
-.slide-num-text {
-    color: #f2f2f2;
-    font-size: 1.25rem;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: 0.4;}
-    to {opacity: 1;}
 }
 
 /*footer styling*/
 .footer {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
 }
