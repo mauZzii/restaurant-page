@@ -39,7 +39,3 @@ Live Version [here](https://mauzzii.github.io/restaurant-page/).
 * **Tabbed Browsing:** using event listeners to switch between different modules displaying each "tab"
 * **Page Deployment via Github:** using custom npm script to update live preview on GH
 * **ES6 Modules:** using exports/imports, module scope, code splitting, and more.
-
-### Comments/To Do
-
-* Create a contact page which includes a google map view, phone number, email, and physical address (fake of course)
