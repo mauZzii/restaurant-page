@@ -24,7 +24,7 @@ Live Version [here](https://mauzzii.github.io/restaurant-page/).
 
 ### Third Party Implementations (Fonts/CSS/JS/etc.)
 
-<!--* [normalize.css](https://necolas.github.io/normalize.css/) may not use this-->
+* [normalize.css](https://necolas.github.io/normalize.css/)
 * [npmjs](https://www.npmjs.com/)
 * [webpack](https://www.webpack.js.org)
 
@@ -42,7 +42,5 @@ Live Version [here](https://mauzzii.github.io/restaurant-page/).
 
 ### Comments/To Do
 
-* Turn barebones HTML into npm/webpack js files
-* Figure out best file/code structure (ES6 Modules)
-* Implement tabbed browsing to access Contact and Menu pages
-* Implement custom npm script to update live preview
+* Create a menu page (Add a handful of coffee items)
+* Create a contact page which includes a google map view, phone number, email, and physical address (fake of course)
