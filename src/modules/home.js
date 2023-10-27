@@ -15,7 +15,7 @@ function createHomeTab() {
 
     imgContainer.classList.add('restaurant-picture');
     img.src = './images/cafe-coffee-counter.png';
-    img.alt = 'cafe coffee counter'
+    img.alt = 'picture of cafe coffee counter'
     imgContainer.appendChild(img);
 
     greetingSection.appendChild(sectionHeading);
